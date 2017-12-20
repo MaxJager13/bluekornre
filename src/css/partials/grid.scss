@@ -1,0 +1,27 @@
+/* Wrapper for outter layout*/
+.flex-wrapper {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* grid system layout */
+.item1 {grid-area: main};
+.item2 {grid-area: aside};
+.item3 {grid-area: section};
+.item4 {grid-area: footer};
+
+.grid-container {
+	height: 80%;
+	width: 80%;
+	position: relative;
+	background: mistyrose;
+	display: grid;
+	grid-template-areas:
+	  "aside main main main main main"
+		"aside main main main main main"
+		"aside main main main main main"
+	  "section section section section footer footer";
+}
