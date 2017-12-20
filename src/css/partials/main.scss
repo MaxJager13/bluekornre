@@ -1,9 +1,9 @@
 /* main tag scss */
-$overlay-title-width: 500px;
-$overlay-title-height: 150px;
+$overlay-title-width: 33rem;
+$overlay-title-height: 11rem;
 
-$overlay-title-top: 2rem;
-$overlay-title-right: 2rem;
+$overlay-title-top: 1rem;
+$overlay-title-right: 1rem;
 
 main {
 	max-width: 100%;
@@ -20,7 +20,7 @@ main {
 		top: 0;
 		left: 0;
 		overflow: hidden;
-		opacity: 0.75;
+		opacity: 0.9;
 		z-index: 1;
 	}
 	.main-grid-overlay {
@@ -45,16 +45,16 @@ main {
 			position: absolute;
 			color: #A1EAFB;
 			font-family: "Roboto";
-			font-size: 4em;
-			right: 1em;
+			font-size: 4rem;
+			right: 1rem;
 		}
 		p {
 			position: absolute;
 			color: #fff;
 			font-family: "Roboto";
-			font-size: 4em;
-			right: 1em;
-			top: 2em;
+			font-size: 3.3rem;
+			right: 1rem;
+			top: 6rem;
 		}
 	}
 }

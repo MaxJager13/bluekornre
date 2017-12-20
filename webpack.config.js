@@ -9,11 +9,35 @@ const bootstrapEntryPoints = require('./webpack.bootstrap.config');
 
 
 const isProd = process.env.NODE_ENV === 'production'; //true | false
-const cssDev = ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'];
+
+const cssDev = [
+									'style-loader',
+									'css-loader',
+									'sass-loader',
+									{
+										loader: 'sass-resources-loader',
+										options: {
+											resources: './src/css/partials/resources.scss'
+										}
+									},
+									'postcss-loader'
+			];
+
 const cssProd = ExtractTextPlugin.extract({
 									fallback: 'style-loader',
-									use: ['css-loader', 'sass-loader', 'postcss-loader'],
+									use: [
+													'css-loader',
+													'sass-loader',
+													{
+														loader: 'sass-resources-loader',
+														options: {
+															resources: './src/css/partials/resources.scss'
+														}
+													},
+													'postcss-loader'
+									],
 								});
+
 const cssConfig = isProd ? cssProd : cssDev;
 
 const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;

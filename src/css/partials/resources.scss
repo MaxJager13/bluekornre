@@ -1,0 +1,4 @@
+@mixin max-width-height($units) {
+	max-width: $units;
+	max-height: $units;
+}
